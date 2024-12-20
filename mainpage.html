@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eBay Header UI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        .header {
+            display: flex;
+             /* Center the logo and search bar */
+            align-items:center; 
+            height: 100px;
+            padding: 10x 10px;
+            position: relative;
+            padding: 10x 10px;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            flex-wrap: wrap;
+            margin-left: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+
+        }
+
+        /* Search Bar */
+         .search-container {
+            display: flex;
+            flex-grow: 1;
+            max-width: 1000px;
+            border-style: solid;
+            border-radius: 50px ;
+        }
+
+        .search-container input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-right: none;
+            border-radius: 20px 0 0 20px;
+            outline: none;
+            font-size: 14px;
+           
+        }
+
+        .search-container select {
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-left: none;
+            background-color: #f9f9f9;
+            border-radius: 0;
+        }
+
+        .search-container button {
+            background-color:  #dd0c7F;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 0 20px 20px 0;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .search-container button:hover {
+            background-color:#bc0c64;
+        }
+
+        /* Icons */
+        .icons {
+            display: flex;
+            position: absolute;
+            right: 20px;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .icons i {
+            font-size: 18px;
+            cursor: pointer;
+            color: #333;
+        }
+
+        .icons i:hover {
+            color:  #dd0c7F;
+        }
+
+        /* Links */
+        .links {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+             margin-left: 20px;
+             padding: 10px 20px;
+        
+        }
+.links .sign-in{
+    display: flex;
+    gap: 20px;
+}
+        .links a {
+            text-decoration: none;
+            color:  #dd0c7F;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+.links .right-nav {
+display: flex;
+gap: 20px
+}
+.link-categories{
+    text-decoration: none;
+}
+
+       /* Slider Container */
+       .slider-container {
+            width: 100%;
+            max-width: 1450px;
+            overflow: hidden;
+            margin: 0 auto;
+            position: relative;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 1s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            height: 400px;
+            box-sizing: border-box;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Slide 1 Styles */
+        .slide-1 {
+            background-image: url('https://i.ebayimg.com/images/g/vkoAAOSw9CZnPHOX/s-l1600.webp');
+            justify-content: flex-start;
+        }
+
+        .slide-1-content {
+            padding-left: 50px;
+        }
+
+        .slide-1-content h1 {
+            color: white;
+            font-size: 48px;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        .slide-1-content h3 {
+            color: white;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .slide-1-content button {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .slide-1-content button:hover {
+            background-color: white;
+            color: black;
+        }
+
+        /* Slide 2 Styles */
+        .slide-2 {
+            background-image: url('https://i.ebayimg.com/images/g/kKIAAOSwNkZnSFrU/s-l960.webp');
+            background-size: cover;
+            background-position: center;
+            justify-content: flex-start;
+        }
+
+        .slide-2-content {
+            padding: 50px;
+            color: black;
+            text-align: left;
+            max-width: 50%;
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        /* Slide 3 Styles */
+        .slide-3 {
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: space-between;
+            padding: 50px;
+        }
+
+        .slide-3-content {
+            max-width: 50%;
+            color: black;
+        }
+
+        .slide-3-images {
+            display: flex;
+            gap: 20px;
+        }
+
+        .slide-3-images div {
+            text-align: center;
+        }
+
+        .slide-3-images img {
+            max-width: 150px; /* Increased image size */
+            border-radius: 10px;
+        }
+
+        .slide-3-images h3 {
+            margin-top: 10px;
+            font-size: 18px;
+            color: black;
+        }
+
+        /* Buttons */
+        button.shop-now {
+            background-color: transparent;
+            color: black;
+            border: 2px solid black;
+            padding: 10px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, color 0.3s;
+            margin-top: 20px;
+        }
+
+        button.shop-now:hover {
+            background-color: black;
+            color: white;
+        }
+
+        /* Navigation Buttons */
+        .nav-buttons {
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .nav-buttons button {
+            background-color: white;
+            color: black;
+            border: none;
+            padding: 15px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Dots */
+        .dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .dot.active {
+            background-color: white;
+        }
+
+/* Section Container */
+.categories-container {
+    text-align: center; /* Center align content */
+    margin: 40px auto; /* Center the container horizontally */
+    width: 100%;
+    max-width: 1200px; /* Set maximum width */
+}
+
+/* Title Styling */
+.categories-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #000;
+}
+
+/* Category Grid */
+.categories {
+    display: flex;
+    justify-content: center; /* Center the categories */
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 140px;
+}
+
+.category img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.category p {
+    font-size: 0.9rem;
+    color: #000;
+    margin-top: 5px;
+}
+
+.category p.active {
+    font-weight: bold;
+    border-bottom: 2px solid #000;
+    display: inline-block;
+    padding-bottom: 2px;
+}
+
+
+    /* Luxury Section */
+    .banner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: white;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 1450px;
+      border-radius: 20px;
+    }
+
+    .banner-content {
+      max-width: 50%;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #000;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .explore-button {
+      padding: 10px 20px;
+      background-color: black;
+      color: white;
+      font-size: 1rem;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .explore-button:hover {
+      background-color: #333;
+    }
+
+    .banner-image img {
+      width: 100%;
+      max-width: 1000px;
+      height: auto;
+    }
+
+        /* Cards Section */
+        .card-banner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #FFBD14;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .cardbanner-content {
+      max-width: 50%;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #000;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 0.8rem;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .find-favorites-button {
+      padding: 10px 20px;
+      background-color: black;
+      color: #FFBD14;
+      font-size: 1rem;
+      border: 2px solid #FFBD14;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .find-favorites-button:hover {
+      background-color: #333;
+      color: #FFBD14;
+    }
+
+    .cardbanner-image img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+    }
+
+        
+        /* Footer Container */
+        .footer {
+            background-color: #f5f5f5;
+            padding: 40px 20px;
+            font-size: 0.7rem;
+            color: #555;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+            margin-bottom: 20px;
+        }
+
+        .footer-column h3 {
+            font-size: 1rem;
+            margin-bottom: 15px;
+            font-weight: bold;
+            color: #dd0c74;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            text-decoration: none;
+            color: #555;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: #dd0c74;
+        }
+
+        /* Social Media Links */
+        .social-icons a {
+            display: inline-block;
+            margin-right: 10px;
+            font-size: 0.8rem;
+            color: #555;
+            transition: color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            color: #000;
+        }
+
+        /* Country Selector */
+        .footer-country {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .footer-country img {
+            width: 20px;
+            height: auto;
+        }
+
+        /* Footer Bottom Links */
+        .footer-bottom {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.7rem;
+            color: #777;
+        }
+
+        .footer-bottom a {
+            color: #555;
+            text-decoration: none;
+            margin: 0 8px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-bottom a:hover {
+            color: #000;
+        }
+
+    </style>
+    <!-- Font Awesome for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+      <!-- Links -->
+      <div class="links">
+        <div class = "sign-in">
+        <p>Hi!  <a href="#">Sign in</a> or <a>Register</a>
+        </p>
+        <div>
+        Daily Deals
+        </div>
+        <div>
+          Help & Contact
+        </div>
+        </div>
+            <div class="right-nav">
+                <div>Sell</div>
+                <div><p>Watchlist <i class="fa-solid fa-angle-down"></i></p></div>
+                <div><p>My eBay <i class="fa-solid fa-angle-down"></i></p></div>
+                <div class = "notification"><i class="fa-solid fa-bell" ></i></i></div>
+                <div class = "cart"><i class="fa-solid fa-cart-shopping"></i></div>
+            </div>
+    </div>
+
+    <!-- Header -->
+    <div class="header">
+        
+
+        <!-- Search Bar -->
+        <div class="logo">
+            <img src="c:\Users\faizy\Downloads\Untitled design (5).png" alt="logo" style="height: 80px; width: 80px; display: flex; justify-content: flex-start;"  >
+           </div>
+        <div class="search-container">
+            <input type="text" placeholder="Search for anything" style="height: 40px width: 1000px;" />
+            <select>
+                <option>All Categories</option>
+                <option>Electronics</option>
+                <option>Fashion</option>
+                <option>Home & Garden</option>
+            </select>
+            <button style="width: 150px;">Search</button>
+        </div>
+        <div>
+       <p style="margin: 10px; color: #555;">Advanced</p>
+    </div>
+    </div>
+<!--Categories links-->
+<div class="link-categories">
+    <a href="#" class="category-item">Electronics</a>
+    <a href="#" class="category-item">Motors</a>
+    <a href="#" class="category-item">Fashion</a>
+    <a href="#" class="category-item">Collectibles and Art</a>
+    <a href="#" class="category-item">Sports</a>
+    <a href="#" class="category-item">Health & Beauty</a>
+    <a href="#" class="category-item">Industrial equipment</a>
+    <a href="#" class="category-item">Home & Garden</a>
+    <a href="#" class="category-item">Deals</a>
+    <a href="#" class="category-item">Sell</a>
+  </div>
+  
+      
+  
+
+    <!-- Slider Container -->
+    <div class="slider-container">
+        <div class="slider">
+            <!-- Slide 1 -->
+            <div class="slide slide-1">
+                <div class="slide-1-content">
+                    <h1>Find it, Get it, Sell it, Love it</h1>
+                    <h3>Discover best-loved, unique, and hard-to-find cards here.</h3>
+                    <button>Get your cards</button>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide slide-2">
+                <div class="slide-2-content">
+                    <h1>Celebrate the season of lux</h1>
+                    <h2 style="font-weight: bold;">Discover a work of luxury fashion accessories for all occasions</h2>
+                    <button class="shop-now">Shop Now</button>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide slide-3">
+                <div class="slide-3-content">
+                    <h1>Brilliantly luxurious</h1>
+                    <h2>Dazzle with timeless accessories made for luxury enthusiasts.</h2>
+                    <button class="shop-now">Shop Now</button>
+                </div>
+                <div class="slide-3-images">
+                    <div>
+                        <img src="https://i.ebayimg.com/images/g/qGMAAOSwj29nSEjJ/s-l300.webp" alt="Watches">
+                        <h3>Watches</h3>
+                    </div>
+                    <div>
+                        <img src="https://i.ebayimg.com/images/g/6WMAAOSwNe1nSEjO/s-l300.webp" alt="Handbags">
+                        <h3>Handbags</h3>
+                    </div>
+                    <div>
+                        <img src="https://i.ebayimg.com/images/g/pMIAAOSwoRFnSEjR/s-l300.webp" alt="Jewelry">
+                        <h3>Jewelry</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dots -->
+        <div class="dots">
+            <div class="dot active" data-index="0"></div>
+            <div class="dot" data-index="1"></div>
+            <div class="dot" data-index="2"></div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="nav-buttons">
+            <button id="prev">❮</button>
+            <button id="play-pause">❚❚</button>
+            <button id="next">❯</button>
+        </div>
+    </div>
+     <!-- Section Title -->
+     <div class="categories-container">
+        <h2>Explore Popular Categories</h2>
+        <!-- Categories Grid -->
+        <div class="categories">
+            <div class="category">
+                <img src="https://i.ebayimg.com/00/s/NTUyWDU1Mw==/z/dLAAAOSw3tpmVtNS/$_1.JPG" alt="Luxury">
+                <p class="category">Luxury</p>
+            </div>
+            <div class="category">
+                <img src="https://ir.ebaystatic.com/cr/v/c01/02_PopularDestination_Sneakers.jpg" alt="Sneakers">
+                <p>Sneakers</p>
+            </div>
+            <div class="category">
+                <img src="https://ir.ebaystatic.com/cr/v/c01/03_PopularDestination_Tire.jpg" alt="P&A">
+                <p>P&A</p>
+            </div>
+            <div class="category">
+                <img src="https://ir.ebaystatic.com/cr/v/c01/ECM_PopularDestination_Reburbished.jpg" alt="Refurbished">
+                <p>Refurbished</p>
+            </div>
+            <div class="category">
+                <img src="https://ir.ebaystatic.com/cr/v/c01/05_PopularDestination_Cards.jpg" alt="Trading Cards">
+                <p>Trading cards</p>
+            </div>
+            <div class="category">
+                <img src="https://ir.ebaystatic.com/cr/v/c01/06_PopularDestination_PreLoved.jpg" alt="Pre-loved Luxury">
+                <p>Pre-loved Luxury</p>
+            </div>
+            <div class="category">
+                <img src="file:///C:/Users/faizy/Downloads/toys.webp" alt="Toys">
+                <p>Toys</p>
+            </div>
+        </div>
+
+      <!-- Luxury Section -->
+      <div class="banner">
+        <div class="banner-content">
+          <h1>Luxury that really dazzle</h1>
+          <h3>Shop luxury fashion for sparkling accessories from top brands</h3>
+          <button class="explore-button">Explore luxury</button>
+        </div>
+        <div class="banner-image">
+          <img src="https://i.ebayimg.com/images/g/Vy0AAOSwTE5nTscs/s-l960.webp" alt="Luxury Accessories">
+        </div>
+      </div>
+
+    <!-- Cards Section -->
+    <div class="card-banner">
+        <div class="cardbanner-content">
+          <h1>Discover a kaleidoscope of cards</h1>
+          <h3>Build your collection of trading cards and collectible card games.</h3>
+          <button class="find-favorites-button">Find your favorites</button>
+        </div>
+        <div class="cardbanner-image">
+          <img src="https://i.ebayimg.com/images/g/xl4AAOSwOX5nEN6d/s-l960.webp" alt="Trading Cards">
+        </div>
+      </div>
+
+     
+      <!-- Footer Section -->
+      <footer class="footer">
+        <div class="footer-container">
+            <!-- Column 1 -->
+            <div class="footer-column">
+                <h3>Buy</h3>
+                <ul>
+                    <li><a href="#">Registration</a></li>
+                    <li><a href="#">eBay Money Back Guarantee</a></li>
+                    <li><a href="#">Bidding & buying help</a></li>
+                    <li><a href="#">Stores</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="footer-column">
+                <h3>Sell</h3>
+                <ul>
+                    <li><a href="#">Start selling</a></li>
+                    <li><a href="#">Learn to sell</a></li>
+                    <li><a href="#">Affiliates</a></li>
+                </ul>
+                <h3>Tools & apps</h3>
+                <ul>
+                    <li><a href="#">Developers</a></li>
+                    <li><a href="#">Security center</a></li>
+                    <li><a href="#">Site map</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="footer-column" id = "Socials">
+                <h3>Stay connected</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i> Facebook</a><br>
+                    <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                </div>
+            </div>
+
+            <!-- Column 4 -->
+            <div class="footer-column">
+                <h3>About eBay</h3>
+                <ul>
+                    <li><a href="#">Company info</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Investors</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Policies</a></li>
+                    <li><a href="#">Advertise with us</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 5 -->
+            <div class="footer-column">
+                <h3>Help & Contact</h3>
+                <ul>
+                    <li><a href="#">Seller Information Center</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+                <h3>Community</h3>
+                <ul>
+                    <li><a href="#">Announcements</a></li>
+                    <li><a href="#">Discussion boards</a></li>
+                    <li><a href="#">eBay Giving Works</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Country Selector -->
+        <div class="footer-country" style="text-align: center; margin-top: 20px;">
+            <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="USA Flag">
+            <span>United States</span>
+        </div>
+
+        <!-- Bottom Links -->
+        <div class="footer-bottom">
+            <p>
+                Copyright &copy; 1995-2024 eBay Inc. All Rights Reserved.
+                <a href="#">Accessibility</a> |
+                <a href="#">User Agreement</a> |
+                <a href="#">Privacy</a> |
+                <a href="#">Consumer Health Data</a> |
+                <a href="#">Payments Terms of Use</a> |
+                <a href="#">Cookies</a> |
+                <a href="#">CA Privacy Notice</a> |
+                <a href="#">Your Privacy Choices</a>
+            </p>
+        </div>
+    </footer>
+    <!-- Font Awesome for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
+
+    <script>
+       const slider = document.querySelector('.slider');
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
+        const playPauseButton = document.getElementById('play-pause');
+
+        let currentIndex = 0;
+        let autoSlide = true;
+        let interval = setInterval(nextSlide, 3000);
+
+        function updateSlider(index) {
+            slider.style.transform = `translateX(-${index * 100}%)`;
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[index].classList.add('active');
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateSlider(currentIndex);
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            updateSlider(currentIndex);
+        }
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                currentIndex = parseInt(dot.dataset.index);
+                updateSlider(currentIndex);
+            });
+        });
+
+        nextButton.addEventListener('click', nextSlide);
+        prevButton.addEventListener('click', prevSlide);
+
+        playPauseButton.addEventListener('click', () => {
+            autoSlide = !autoSlide;
+            playPauseButton.textContent = autoSlide ? '❚❚' : '▶';
+            if (autoSlide) {
+                interval = setInterval(nextSlide, 3000);
+            } else {
+                clearInterval(interval);
+            }
+        });
+    </script>
+</body>
+</html>
