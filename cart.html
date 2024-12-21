@@ -119,6 +119,9 @@
     </style>
   </head>
   <body>
+    <div id="header"></div>
+    <!-- Header placeholder -->
+
     <div class="container">
       <div class="cart-header">Shopping Cart</div>
       <div class="cart-content">
@@ -144,11 +147,18 @@
               <p class="subtotal">Subtotal</p>
               <p class="subtotal" id="subtotal">$0.00</p>
             </div>
-            <a href="#" class="checkout-button">Go to checkout</a>
+            <button class="checkout-button" onclick="goToCheckout()">
+              Go to checkout
+            </button>
           </div>
         </div>
       </div>
     </div>
+
+    <div id="footer"></div>
+    <!-- Footer placeholder -->
+
+    <script src="loadHeaderFooter.js"></script>
     <script>
       // Retrieve product details from localStorage
       const cartItem = JSON.parse(localStorage.getItem('cartItem'));
@@ -181,6 +191,11 @@
         document.getElementById('cartItem').innerHTML = '';
         document.getElementById('itemPrice').innerText = '$0.00';
         document.getElementById('subtotal').innerText = '$0.00';
+      }
+
+      function goToCheckout() {
+        // Redirect to checkout page
+        window.location.href = 'checkout.html';
       }
     </script>
   </body>
