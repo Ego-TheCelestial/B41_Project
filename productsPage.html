@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Gallery</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Link to CSS -->
+  </head>
+  <body>
+    <header class="page-header">
+      <h1>Our Exclusive Collection</h1>
+    </header>
+
+    <div class="sort-section">
+      <label for="sort">Sort By:</label>
+      <select id="sort">
+        <option value="default">Default</option>
+        <option value="priceLow">Price: Low to High</option>
+        <option value="priceHigh">Price: High to Low</option>
+      </select>
+    </div>
+
+    <main class="product-gallery" id="productGallery">
+      <div class="product-card" data-price="54.99">
+        <span class="wishlist">♥</span>
+        <img src="product1.jpg" alt="GUCCI Wallet" />
+        <h2>GUCCI Wallet</h2>
+        <p class="price">$54.99</p>
+        <div class="actions">
+          <button>Add to Cart</button>
+          <button>View Details</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-price="268.99">
+        <span class="wishlist">♥</span>
+        <img src="product2.jpg" alt="CHANEL Wallet" />
+        <h2>CHANEL Wallet</h2>
+        <p class="price">$268.99</p>
+        <div class="actions">
+          <button>Add to Cart</button>
+          <button>View Details</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-price="68.99">
+        <span class="wishlist">♥</span>
+        <img src="product3.jpg" alt="Balenciaga Wallet" />
+        <h2>Balenciaga Wallet</h2>
+        <p class="price">$68.99</p>
+        <div class="actions">
+          <button>Add to Cart</button>
+          <button>View Details</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-price="219.99">
+        <span class="wishlist">♥</span>
+        <img src="product4.jpg" alt="GUCCI Leather Purse" />
+        <h2>GUCCI Leather Purse</h2>
+        <p class="price">$219.99</p>
+        <div class="actions">
+          <button>Add to Cart</button>
+          <button>View Details</button>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+    <!-- Link to JavaScript -->
+  </body>
+</html>

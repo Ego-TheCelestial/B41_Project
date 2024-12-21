@@ -1,0 +1,141 @@
+/* General Reset */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Header */
+.page-header {
+  text-align: center;
+  background-color: #dd0c74;
+  padding: 20px 0;
+  color: #fff;
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Sort Section */
+.sort-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.sort-section label {
+  font-size: 16px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.sort-section select {
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+/* Product Gallery */
+.product-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Product Card */
+.product-card {
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #e1e1e1;
+  border-radius: 10px;
+  width: 22%;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+/* Hover Effect */
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Wishlist Icon */
+.product-card .wishlist {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 5px;
+  font-size: 18px;
+  color: #dd0c74;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-card .wishlist:hover {
+  background-color: #f7f7f7;
+}
+
+/* Product Image */
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+/* Product Title */
+.product-card h2 {
+  font-size: 18px;
+  color: #333;
+  padding: 10px;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin: 0;
+}
+
+/* Product Price */
+.product-card .price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #dd0c74;
+  padding: 10px 0;
+  margin: 0;
+}
+
+/* Actions Section */
+.product-card .actions {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+}
+
+.product-card .actions button {
+  background-color: #dd0c74;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.product-card .actions button:hover {
+  background-color: #b50b60;
+  transform: scale(1.05);
+}
