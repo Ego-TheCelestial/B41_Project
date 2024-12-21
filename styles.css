@@ -84,7 +84,7 @@ nav ul li a {
 }
 
 .product-card p {
-    font-size: 1.1rem;
+    font-size: 14px;
     color: black;
 }
 
@@ -98,7 +98,7 @@ button {
 }
 
 button:hover {
-    background: #005fb3;
+    background: #7b1fa2;
 }
 
 /* Footer */
