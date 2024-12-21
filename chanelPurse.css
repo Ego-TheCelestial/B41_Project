@@ -84,6 +84,8 @@ body {
     margin-bottom: 5px;
 }
 
+
+
 .product-quantity {
     margin: 50px 0;
     display: flex;
@@ -102,11 +104,11 @@ body {
     text-align: center;
 }
 
-
 .buttons {
     display: flex;
     flex-direction: column;
     gap: 10px;
+
 }
 
 .buttons button {
@@ -121,6 +123,7 @@ body {
     transition: background-color 0.3s;
     background-color: #DD0C74
 }
+
 
 .buttons button:hover {
     background-color: #7b1fa2;

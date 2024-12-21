@@ -1,21 +1,28 @@
 <!-- product descreption page  -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Product Page</title>
   <link rel="stylesheet" href="productdes.css">
 </head>
+
 <body>
   <div class="container">
     <div class="left-panel">
       <div class="thumbnails">
-        <img src="https://i.ebayimg.com/images/g/HkQAAOSw0nhiUbqY/s-l960.webp" alt="Thumbnail 1" onclick="changeImage(this)">
-        <img src="https://i.ebayimg.com/images/g/DlsAAOSwAjtiUbqZ/s-l960.webp" alt="Thumbnail 2" onclick="changeImage(this)">
-        <img src="https://i.ebayimg.com/images/g/fZEAAOSwXtFiUbqb/s-l960.webp" alt="Thumbnail 3" onclick="changeImage(this)">
-        <img src="https://i.ebayimg.com/images/g/JroAAOSw-LhiUbqa/s-l960.webp" alt="Thumbnail 4" onclick="changeImage(this)">
-        <img src="https://i.ebayimg.com/images/g/Jr0AAOSw-LhiUbqb/s-l960.webp" alt="Thumbnail 5" onclick="changeImage(this)">
+        <img src="https://i.ebayimg.com/images/g/HkQAAOSw0nhiUbqY/s-l960.webp" alt="Thumbnail 1"
+          onclick="changeImage(this)">
+        <img src="https://i.ebayimg.com/images/g/DlsAAOSwAjtiUbqZ/s-l960.webp" alt="Thumbnail 2"
+          onclick="changeImage(this)">
+        <img src="https://i.ebayimg.com/images/g/fZEAAOSwXtFiUbqb/s-l960.webp" alt="Thumbnail 3"
+          onclick="changeImage(this)">
+        <img src="https://i.ebayimg.com/images/g/JroAAOSw-LhiUbqa/s-l960.webp" alt="Thumbnail 4"
+          onclick="changeImage(this)">
+        <img src="https://i.ebayimg.com/images/g/Jr0AAOSw-LhiUbqb/s-l960.webp" alt="Thumbnail 5"
+          onclick="changeImage(this)">
       </div>
     </div>
     <div class="main-image">
@@ -27,7 +34,13 @@
       <p class="offer">Was US $89.99 (36% off)</p>
       <p class="condition">Condition: New with box</p>
       <p class="sale-info">Sale ends in: 7d 6h</p>
-      <p class="quantity">Quantity: 1</p>
+
+      <div class="product-quantity">
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" value="1" min="1" />
+
+      </div>
+
       <div class="buttons">
         <button id="buyNow">Buy It Now</button>
         <button id="addToCart" onclick="redirectToCart()">Add to Cart</button>
@@ -36,4 +49,5 @@
   </div>
   <script src="productdes.js"></script>
 </body>
+
 </html>

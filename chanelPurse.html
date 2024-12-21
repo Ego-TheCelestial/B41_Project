@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="chanelPurse.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <div class="thumbnails">
+                <img src="https://i.ebayimg.com/images/g/Y-wAAOSw3hdnRcsQ/s-l1600.webp" alt="Thumbnail 1"
+                    onclick="changeImage(this)">
+                <img src="https://i.ebayimg.com/images/g/mb4AAOSwh01nRcsQ/s-l960.webp" alt="Thumbnail 2"
+                    onclick="changeImage(this)">
+                <img src="https://i.ebayimg.com/images/g/dy4AAOSwbHZnRcsS/s-l960.webp" alt="Thumbnail 3"
+                    onclick="changeImage(this)">
+                <img src="https://i.ebayimg.com/images/g/OvkAAOSwpAVnRcsW/s-l960.webp" alt="Thumbnail 4"
+                    onclick="changeImage(this)">
+                <img src="https://i.ebayimg.com/images/g/p00AAOSw3cFnRcsS/s-l960.webp" alt="Thumbnail 5"
+                    onclick="changeImage(this)">
+            </div>
+        </div>
+        <div class="main-image">
+            <img id="mainImage" src="https://i.ebayimg.com/images/g/c4EAAOSwirxnRcsS/s-l960.webp" alt="Main Product">
+        </div>
+        <div class="right-panel">
+
+            <h1>CHANEL Timeless Classic Pink Quilted Single Flap Chain Shoulder Bag </h1>
+            <p class="price">US $3,748.50 </p>
+            <p class="offer">Was US $4,410.00 (15% off)</p>
+            <p class="condition">HIVE PRELOVED</p>
+            <p class="sale-info">Sale ends in: 9h 21m</p>
+
+            <div class="product-quantity">
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" value="1" min="1" />
+
+            </div>
+
+
+            <div class="buttons">
+                <button id="buyNow">Buy It Now</button>
+                <button id="addToCart" onclick="redirectToCart()">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <script src="chanelPurse.js"></script>
+</body>
+
+</html>
