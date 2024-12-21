@@ -5,17 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navbar</title>
     <style>
-          .header {
+        *{
+            margin: 0;
+            padding: 0;
+        }
+         .header {
             display: flex;
              /* Center the logo and search bar */
-            align-items:start; 
+            align-items:center; 
             height: 100px;
+            padding: 10x 10px;
             position: relative;
             padding: 10x 10px;
             background-color: #fff;
             border-bottom: 1px solid #ddd;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             flex-wrap: wrap;
+            margin-left: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 
 
         }
@@ -85,8 +92,12 @@
         .links {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             gap: 10px;
             font-size: 13px;
+             margin-left: 20px;
+             padding: 10px 20px;
+        
         }
 .links .sign-in{
     display: flex;
@@ -105,49 +116,54 @@
 display: flex;
 gap: 20px
 }
+.link-categories{
+    text-decoration: none;
+}
     </style>
 </head>
 <body>
-    <!-- Links -->
-    <div class="links" style="padding: 10px 20px;">
-        <div class = "sign-in">
-        <p>Hi!  <a href="#">Sign in</a> or <a>Register</a>
-        </p>
-        <div>
-        Daily Deals
-        </div>
-        <div>
-          Help & Contact
-        </div>
-        </div>
-            <div class="right-nav">
-                <div>Sell</div>
-                <div><p>Watchlist <i class="fa-solid fa-angle-down"></i></p></div>
-                <div><p>My eBay <i class="fa-solid fa-angle-down"></i></p></div>
-                <div class = "notification"><i class="fa-solid fa-bell" ></i></i></div>
-                <div class = "cart"><i class="fa-solid fa-cart-shopping"></i></div>
-            </div>
+ <!-- Links -->
+ <div class="links">
+    <div class = "sign-in">
+    <p>Hi!  <a href="#">Sign in</a> or <a>Register</a>
+    </p>
+    <div>
+    Daily Deals
     </div>
-
-    <!-- Header -->
-    <div class="header">
-        
-
-        <!-- Search Bar -->
-        <div class="logo">
-            <img src="c:\Users\faizy\Downloads\Untitled design (5).png" alt="logo" style="height: 60px; display: flex; justify-content: flex-start;"  >
-           </div>
-        <div class="search-container">
-            <input type="text" placeholder="Search for anything" style="height: 40px; width: 1000px;" />
-            <select>
-                <option>All Categories</option>
-                <option>Electronics</option>
-                <option>Fashion</option>
-                <option>Home & Garden</option>
-            </select>
-            <button style="width: 150px;">Search</button>
-        </div>
-       
+    <div>
+      Help & Contact
     </div>
+    </div>
+        <div class="right-nav">
+            <div>Sell</div>
+            <div><p>Watchlist <i class="fa-solid fa-angle-down"></i></p></div>
+            <div><p>My eBay <i class="fa-solid fa-angle-down"></i></p></div>
+            <div class = "notification"><i class="fa-solid fa-bell" ></i></i></div>
+            <div class = "cart"><i class="fa-solid fa-cart-shopping"></i></div>
+        </div>
+</div>
+
+<!-- Header -->
+<div class="header">
+    
+
+    <!-- Search Bar -->
+    <div class="logo">
+        <img src="c:\Users\faizy\Downloads\Untitled design (5).png" alt="logo" style="height: 80px; width: 80px; display: flex; justify-content: flex-start;"  >
+       </div>
+    <div class="search-container">
+        <input type="text" placeholder="Search for anything" style="height: 40px width: 1000px;" />
+        <select>
+            <option>All Categories</option>
+            <option>Electronics</option>
+            <option>Fashion</option>
+            <option>Home & Garden</option>
+        </select>
+        <button style="width: 150px;">Search</button>
+    </div>
+    <div>
+   <p style="margin: 10px; color: #555;">Advanced</p>
+</div>
+</div>
 </body>
 </html>
